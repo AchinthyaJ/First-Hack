@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://newsapi.org/v2/everything?q=&apiKey=c18dd1e018524cd285999d0ca8f582fc"
+    }
+  ]
+}
