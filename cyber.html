@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking and Tech Problems Articles</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: #eee;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        header img{
+            float: left;
+            padding: 15px 0;
+            z-index: 1; 
+            margin-top: 1px;
+            align-items: center;           
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            float: right;
+            z-index: 1;
+            margin-top: 10px;
+            
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff4081;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #ff4081;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #ff79b0;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Loading animation */
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+
+        .dot {
+            margin: 0 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: blink 1.4s infinite both;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes blink {
+            0%, 80%, 100% {
+                opacity: 0.3;
+            }
+            40% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #ff4081 }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./NICON.png" alt="icon">
+    <nav>
+        <a href="#hacking-tutorials">Hacking Tutorials</a>
+        <a href="./cyber.html">Cybersecurity News</a>
+        <a href="#tech-troubleshooting">Tech Troubleshooting</a>
+        <a href="#software-reviews">Software Reviews</a>
+    </nav>
+    </header>
+
+    <section id="content">
+        <p id="loading">Loading content...</p>
+    </section>
+    <
+
+    <script src="Cyber.js"></script>
+</body>
+</html>
