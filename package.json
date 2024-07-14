@@ -1,0 +1,27 @@
+{
+  "name": "first-hack",
+  "version": "1.0.0",
+  "description": "a website that fetches tech news from a news api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incharajayaram/First-Hack.git"
+  },
+  "keywords": [
+    "technology",
+    "cybersecurity",
+    "hack"
+  ],
+  "author": "Incharajayaram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Incharajayaram/First-Hack/issues"
+  },
+  "homepage": "https://github.com/Incharajayaram/First-Hack#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
