@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Hack</title>
+    <link rel="icon" href="./Images/icon.png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: #eee;
+            margin-right: 20px;
+            overflow-x: hidden;
+            margin-bottom: 0px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-right: 0px;
+        }
+
+        header img{
+            float: left;
+            padding: 15px 0;
+            z-index: 1; 
+            margin: 20px;           
+        } 
+         
+        .menubtn h1{
+            float: right;
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .menubtn h1::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff4081;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+       
+        .menubtn h1:hover::after {
+            width: 100%;
+        }
+        nav {
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            float: right;
+            margin-top: 40px;
+            margin-right: 20px;
+            
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff4081;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+        }
+
+z
+
+        h2 {
+            color: #ff4081;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #ff79b0;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Loading animation */
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+
+        .dot {
+            margin: 0 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: blink 1.4s infinite both;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes blink {
+            0%, 80%, 100% {
+                opacity: 0.3;
+            }
+            40% {
+                opacity: 1;
+            }
+        }
+
+        #c-news{
+             margin-top: 40px;
+        }
+
+        /* Welcome section */
+        #welcome {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #welcome::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        #welcome.welcome {
+            font-size: 3em;
+            z-index: 2;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        #welcome img {
+            font-size: 3em;
+            z-index: 2;
+            animation: fadeInDown 2s ease-in-out;
+            
+        }
+
+        #welcome p {
+            font-size: 1.5em;
+            z-index: 2;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header{
+            background: linear-gradient(to top, rgb(162, 0, 255), green);
+            text-align: left;
+            font-size: 3em;
+            -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+           
+            display: inline;
+            border-bottom: 3px solid #f50000;
+            
+        }
+        
+        
+        .button-64 {
+  align-items: center;
+
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <center><img src="./Images/NICON.png" alt="icon"></center>
+        
+    <nav>
+        <a href="./solutions.html">Hacking Tutorials</a>
+        <a href="#">About</a>
+        <a href="./categories.html">Categories</a>
+        <a href="./HAckType.html">Hacker Typing</a>
+    </nav>
+    </header>
+    <section id="welcome">
+        <div>
+            <img src="./Images/icon.png" width="150" height="150"></img>
+            <h1 class="welcome">Welcome to Tech Insights</h1>
+            <p>Hello Welcome to this site made by Achinthya. J. Want to know what's happening in the world about Hacking. Just come here. This is a website using News API, Content may be not related.</p>
+        </div>
+    </section>
+    <section id="h-news"><h1 class="header">Latest Hacking News</h1></u>
+    <section id="content">
+        <p id="loading">Loading content<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
+    </section>
+    <a href="./categories.html"></a><button class="button-64" role="button"><span class="text">Explore More</span></button></a>
+    </section>
+    <section id="c-news">
+        <h1 class="header">Latest Cyber-security News</h1></u>
+        <section id="content-cyber">
+            <p id="loading">Loading content<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
+        </section>
+    </section>
+    <a href="./categories.html"><button class="button-64" role="button"><span class="text">Explore More</span></button></a>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
