@@ -24,5 +24,8 @@
   "homepage": "https://github.com/Incharajayaram/First-Hack#readme",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
   }
 }
