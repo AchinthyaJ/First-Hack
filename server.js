@@ -33,12 +33,12 @@ const server = http.createServer((req, res) => {
 });
 
 const express = require('express');
-const path = require('./routes');
+const path = require('path');
 
 const app = express(); // Create an Express app
 
 // Serve static files from the 'public' directory
-app.use(express.static(path(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // ... other routes and server logic
 app.get('/categories', categoriesRoute); // Handle requests for /categories with categoriesRoute function
