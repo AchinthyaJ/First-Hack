@@ -5,113 +5,356 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
     <link rel="icon" href="./Images/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary-color: #ec4899;
+            --accent-color: #06b6d4;
+            --success-color: #10b981;
+            --dark-bg: #0f0f23;
+            --darker-bg: #0a0a1a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #1f1c2c, #928dab);
-            color: #eee;
-            margin-right: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            color: var(--text-primary);
             overflow-x: hidden;
-            margin-bottom: 0px;
+            line-height: 1.6;
+            min-height: 100vh;
         }
         
         header {
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 50px;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            margin: 0px;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header img{
+        header img {
             float: left;
-            
-            z-index: 1; 
-            margin-top:0px;           
-        } 
-         
-    
+            margin-top: -10px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
         nav {
-            display: block;
-            background: rgba(0, 0, 0, 0.3);
-            color: #fff;
-            padding: 15px;
-            font-weight: bold;
-            text-align: center;
-            cursor: pointer;
-            position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
             float: right;
-            margin-top: 0px;
-            margin-right: 20px;
-            
+            margin-top: -60px;
+            margin-right: 2rem;
+            background: var(--card-bg);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
         }
 
         nav a {
-            color: #fff;
-            margin: 0 15px;
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
             position: relative;
+            font-size: 0.9rem;
         }
 
-        nav a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #ff4081;
-            transition: width 0.3s;
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
+        nav a:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
 
-        nav a:hover::after {
-            width: 100%;
+        .buttons {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        .buttons{
-            margin: 20px;
+        .buttons h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .buttons h1{
-            font-size: 30px;
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
-        .but{
-            margin: 20px;
-            padding: 10px;
-            border: solid white 2px;
+
+        .but {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
             border-radius: 15px;
-            background-color: transparent;
-            color: #eee;
-        }
-
-        .but:hover{
-            background-color: #eee;
-            color: black;
-            transition: 300ms;
+            padding: 1.5rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
         }
-        article {
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+
+        .but::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .but:hover::before {
+            left: 100%;
+        }
+
+        .but:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .but:active {
+            transform: translateY(-2px);
+        }
+
+        #content-loaded {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 32px var(--shadow-color);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .article-card.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .article-source {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .article-date {
+            color: var(--text-secondary);
+        }
+
+        .article-title {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .read-more-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .read-more-btn:hover svg {
+            transform: rotate(45deg);
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            color: #ef4444;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .no-articles {
+            color: var(--text-secondary);
+            font-style: italic;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                margin: 1rem;
+                float: none;
+                margin-top: 1rem;
+            }
             
+            .buttons h1 {
+                font-size: 2rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .but {
+                padding: 1rem;
+            }
+            
+            header {
+                padding: 1rem;
+            }
+            
+            .article-card {
+                padding: 1.5rem;
+            }
         }
 
-        article:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -119,27 +362,65 @@
         <center><img src="./Images/NICON.png" alt="icon" width="200px"></center>
         
     <nav>
-        <a href="#hacking-tutorials">Hacking Tutorials</a>
-        <a href="./cyber.html">About</a>
-        <a href="#tech-troubleshooting">Categories</a>
+        <a href="./solutions.html">Hacking Tutorials</a>
+        <a href="./index.html">Home</a>
+        <a href="./categories.html">Categories</a>
         <a href="./HAckType.html">Hacker Typing</a>
     </nav>
     </header>
-    <section class="buttons"><h1>Categories</h1><button id="selector1" class="but">Hacking News</button>
-    <button id="selector2" class="but">Cyber-security News </button>
-    <button id="selector3" class="but">Smartphone News</button>
-    <button id="selector4" class="but">Tech Scams</button>
-    <button id="selector5"class="but">Gaming News</button>
-    <button id="selector6" class="but">Blockchain and Cryptocurrency</button>
-    <button id="selector7" class="but">Artificial Intelligence (AI) and Machine Learning (ML)</button>
-    <button id="selector8"class="but">AI in Gaming</button>
-    <button id="selector9" class="but">Neuralink </button>
-    <button id="selector10" class="but">Telecommunication and Networking</button>
-    <button id="selector11" class="but">Metaverse and Virtual Reality (VR)</button>
-
+    
+    <section class="buttons">
+        <h1>Explore Categories</h1>
+        <div class="category-grid">
+            <button id="selector1" class="but">
+                <strong>🔒 Hacking News</strong><br>
+                <small>Latest hacking techniques and security breaches</small>
+            </button>
+            <button id="selector2" class="but">
+                <strong>🛡️ Cybersecurity News</strong><br>
+                <small>Security updates and threat intelligence</small>
+            </button>
+            <button id="selector3" class="but">
+                <strong>📱 Smartphone Technology</strong><br>
+                <small>Mobile security and latest smartphone tech</small>
+            </button>
+            <button id="selector4" class="but">
+                <strong>⚠️ Tech Scams</strong><br>
+                <small>Fraud alerts and scam prevention</small>
+            </button>
+            <button id="selector5" class="but">
+                <strong>🎮 Gaming Technology</strong><br>
+                <small>Gaming security and industry news</small>
+            </button>
+            <button id="selector6" class="but">
+                <strong>₿ Blockchain & Cryptocurrency</strong><br>
+                <small>Crypto security and blockchain technology</small>
+            </button>
+            <button id="selector7" class="but">
+                <strong>🤖 AI & Machine Learning</strong><br>
+                <small>AI security and machine learning advances</small>
+            </button>
+            <button id="selector8" class="but">
+                <strong>🎯 AI in Gaming</strong><br>
+                <small>AI applications in gaming industry</small>
+            </button>
+            <button id="selector9" class="but">
+                <strong>🧠 Neuralink Technology</strong><br>
+                <small>Brain-computer interface developments</small>
+            </button>
+            <button id="selector10" class="but">
+                <strong>📡 Telecom & Networking</strong><br>
+                <small>Network security and telecommunications</small>
+            </button>
+            <button id="selector11" class="but">
+                <strong>🌐 Metaverse & VR</strong><br>
+                <small>Virtual reality and metaverse security</small>
+            </button>
+        </div>
     </section>
 
-    <section id="content-loaded"> </section>
+    <section id="content-loaded"></section>
+    
     <script src="script.js"></script>
 </body>
 </html>
