@@ -37,25 +37,14 @@ const mockArticles = [
 // Enhanced fetch function with GNews API
 async function fetchGNewsArticles(query, maxResults = 10) {
     try {
-        // For demo purposes, we'll use mock data
-        // In production, uncomment the following lines and add your API key
-        /*
-        const url = `${GNEWS_BASE_URL}?q=${encodeURIComponent(query)}&token=${GNEWS_API_KEY}&lang=en&max=${maxResults}`;
-        const response = await fetch(url);
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        return data.articles;
-        */
-        
-        // Mock data for demo
-        return mockArticles.filter(article => 
+        // Always use mock data for demo since API key is not configured
+        const filteredArticles = mockArticles.filter(article => 
             article.title.toLowerCase().includes(query.toLowerCase()) ||
             article.description.toLowerCase().includes(query.toLowerCase())
         );
+        
+        // If no filtered results, return all mock articles
+        return filteredArticles.length > 0 ? filteredArticles : mockArticles;
     } catch (error) {
         console.error('Error fetching articles:', error);
         return mockArticles; // Fallback to mock data
@@ -533,14 +522,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentCyberSection = document.getElementById('content-cyber');
     
     if (contentSection) {
-        fetchGNewsArticles('hacking cybersecurity', 4).then(articles => {
+        fetchGNewsArticles('hacking', 4).then(articles => {
             displayArticles(articles, contentSection);
+        }).catch(error => {
+            console.error('Error loading hacking news:', error);
+            displayArticles(mockArticles, contentSection);
         });
     }
     
     if (contentCyberSection) {
-        fetchGNewsArticles('cybersecurity threats', 4).then(articles => {
+        fetchGNewsArticles('cybersecurity', 4).then(articles => {
             displayArticles(articles, contentCyberSection);
+        }).catch(error => {
+            console.error('Error loading cybersecurity news:', error);
+            displayArticles(mockArticles, contentCyberSection);
         });
     }
     
