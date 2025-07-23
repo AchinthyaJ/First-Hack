@@ -24,7 +24,15 @@
   },
   "homepage": "https://github.com/Incharajayaram/First-Hack#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "socket.io": "^4.7.4"
   },
   "devDependencies": {
     "serve": "^14.2.4"
