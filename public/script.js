@@ -1,5 +1,5 @@
 // GNews API configuration
-const GNEWS_API_KEY = 'YOUR_GNEWS_API_KEY'; // You'll need to get this from https://gnews.io/
+const GNEWS_API_KEY = 'eaad89d324eaa978f996c6d028c7ddee'; // You'll need to get this from https://gnews.io/
 const GNEWS_BASE_URL = 'https://gnews.io/api/v4/search';
 
 // Fallback to mock data for demo purposes
