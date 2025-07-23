@@ -31,7 +31,7 @@ const mockArticles = [
         url: "#",
         publishedAt: "2025-01-27T08:00:00Z",
         source: { name: "Vulnerability Research Lab" }
-    }
+    },
     // Hacking News Articles
     {
         title: "New Ransomware Campaign Targets Healthcare Systems",
