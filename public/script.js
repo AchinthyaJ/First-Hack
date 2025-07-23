@@ -896,10 +896,6 @@ function switchToNextSnippet() {
     }
 }
 
-let enterCount = 0;
-let backspaceCount = 0;
-let codeIndex = 0;
-
 // Hacker typer event listeners
 document.getElementById('okButton')?.addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'none';
