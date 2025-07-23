@@ -32,22 +32,300 @@ const mockArticles = [
         publishedAt: "2025-01-27T08:00:00Z",
         source: { name: "Vulnerability Research Lab" }
     }
+    // Hacking News Articles
+    {
+        title: "New Ransomware Campaign Targets Healthcare Systems",
+        description: "A sophisticated ransomware group has launched targeted attacks against major healthcare providers worldwide.",
+        url: "#",
+        publishedAt: "2025-01-27T15:30:00Z",
+        source: { name: "Healthcare Security Alert" },
+        category: "hacking"
+    },
+    {
+        title: "Critical SSH Vulnerability Allows Remote Code Execution",
+        description: "Security researchers discover a critical flaw in OpenSSH that could allow attackers to execute arbitrary code.",
+        url: "#",
+        publishedAt: "2025-01-27T14:45:00Z",
+        source: { name: "Security Research Today" },
+        category: "hacking"
+    },
+    {
+        title: "APT Group Exploits Microsoft Exchange Servers",
+        description: "Advanced persistent threat actors are actively exploiting newly discovered vulnerabilities in Exchange servers.",
+        url: "#",
+        publishedAt: "2025-01-27T13:20:00Z",
+        source: { name: "Threat Intelligence Weekly" },
+        category: "hacking"
+    },
+    {
+        title: "Social Engineering Attacks Increase by 300% in 2025",
+        description: "Cybercriminals are increasingly using sophisticated social engineering techniques to bypass security measures.",
+        url: "#",
+        publishedAt: "2025-01-27T12:15:00Z",
+        source: { name: "Social Engineering Watch" },
+        category: "hacking"
+    },
+    {
+        title: "New Phishing Campaign Mimics Popular Banking Apps",
+        description: "Hackers create convincing replicas of banking applications to steal user credentials and financial data.",
+        url: "#",
+        publishedAt: "2025-01-27T11:30:00Z",
+        source: { name: "Financial Security News" },
+        category: "hacking"
+    },
+    {
+        title: "Supply Chain Attack Compromises Software Development Tools",
+        description: "Malicious actors infiltrate popular development tools, potentially affecting thousands of applications.",
+        url: "#",
+        publishedAt: "2025-01-27T10:45:00Z",
+        source: { name: "DevSec Alert" },
+        category: "hacking"
+    },
+    
+    // Cybersecurity News Articles
+    {
+        title: "New AI-Powered Threat Detection System Launched",
+        description: "Leading cybersecurity firm releases advanced AI system capable of detecting previously unknown threats.",
+        url: "#",
+        publishedAt: "2025-01-27T16:00:00Z",
+        source: { name: "AI Security Today" },
+        category: "cybersecurity"
+    },
+    {
+        title: "Government Announces New Cybersecurity Framework",
+        description: "Federal agencies release comprehensive guidelines for protecting critical infrastructure from cyber threats.",
+        url: "#",
+        publishedAt: "2025-01-27T15:15:00Z",
+        source: { name: "Government Security Bulletin" },
+        category: "cybersecurity"
+    },
+    {
+        title: "Multi-Factor Authentication Becomes Mandatory for Federal Contractors",
+        description: "New regulations require all government contractors to implement advanced authentication measures.",
+        url: "#",
+        publishedAt: "2025-01-27T14:30:00Z",
+        source: { name: "Federal Compliance News" },
+        category: "cybersecurity"
+    },
+    {
+        title: "Quantum-Resistant Encryption Standards Finalized",
+        description: "NIST releases final standards for cryptographic algorithms designed to withstand quantum computer attacks.",
+        url: "#",
+        publishedAt: "2025-01-27T13:45:00Z",
+        source: { name: "Quantum Security Journal" },
+        category: "cybersecurity"
+    },
+    {
+        title: "Cloud Security Spending Reaches Record High",
+        description: "Organizations worldwide increase cloud security investments as remote work continues to grow.",
+        url: "#",
+        publishedAt: "2025-01-27T12:30:00Z",
+        source: { name: "Cloud Security Report" },
+        category: "cybersecurity"
+    },
+    {
+        title: "Cybersecurity Skills Gap Widens Despite Training Programs",
+        description: "Industry report shows growing demand for cybersecurity professionals outpaces available talent.",
+        url: "#",
+        publishedAt: "2025-01-27T11:45:00Z",
+        source: { name: "Cybersecurity Workforce Study" },
+        category: "cybersecurity"
+    },
+    
+    // Smartphone Technology Articles
+    {
+        title: "New iPhone Security Feature Blocks Advanced Spyware",
+        description: "Apple introduces revolutionary security technology that prevents state-sponsored surveillance tools.",
+        url: "#",
+        publishedAt: "2025-01-27T16:30:00Z",
+        source: { name: "Mobile Security News" },
+        category: "smartphone technology"
+    },
+    {
+        title: "Android 15 Introduces Enhanced Privacy Controls",
+        description: "Google's latest Android version includes advanced privacy features and improved app permissions.",
+        url: "#",
+        publishedAt: "2025-01-27T15:45:00Z",
+        source: { name: "Android Security Update" },
+        category: "smartphone technology"
+    },
+    {
+        title: "5G Network Vulnerabilities Expose User Data",
+        description: "Security researchers identify critical flaws in 5G infrastructure that could compromise user privacy.",
+        url: "#",
+        publishedAt: "2025-01-27T14:15:00Z",
+        source: { name: "5G Security Watch" },
+        category: "smartphone technology"
+    },
+    
+    // Tech Scams Articles
+    {
+        title: "Cryptocurrency Investment Scams Surge 400% in 2025",
+        description: "Fraudsters exploit crypto market volatility to deceive investors with fake investment opportunities.",
+        url: "#",
+        publishedAt: "2025-01-27T17:00:00Z",
+        source: { name: "Fraud Prevention Alert" },
+        category: "tech scams"
+    },
+    {
+        title: "AI-Generated Deepfake Scams Target Elderly Population",
+        description: "Scammers use advanced AI to create convincing video calls impersonating family members.",
+        url: "#",
+        publishedAt: "2025-01-27T16:15:00Z",
+        source: { name: "Elder Fraud Protection" },
+        category: "tech scams"
+    },
+    {
+        title: "Fake Tech Support Calls Increase During Holiday Season",
+        description: "Cybercriminals ramp up fake technical support scams targeting unsuspecting computer users.",
+        url: "#",
+        publishedAt: "2025-01-27T15:30:00Z",
+        source: { name: "Scam Alert Network" },
+        category: "tech scams"
+    },
+    
+    // Gaming Technology Articles
+    {
+        title: "Gaming Platforms Implement Advanced Anti-Cheat Systems",
+        description: "Major gaming companies deploy AI-powered systems to detect and prevent cheating in online games.",
+        url: "#",
+        publishedAt: "2025-01-27T17:30:00Z",
+        source: { name: "Gaming Security Today" },
+        category: "gaming technology"
+    },
+    {
+        title: "NFT Gaming Marketplace Suffers Major Security Breach",
+        description: "Popular blockchain gaming platform loses millions in digital assets due to smart contract vulnerability.",
+        url: "#",
+        publishedAt: "2025-01-27T16:45:00Z",
+        source: { name: "Blockchain Gaming News" },
+        category: "gaming technology"
+    },
+    
+    // Blockchain & Cryptocurrency Articles
+    {
+        title: "DeFi Protocol Loses $50M in Flash Loan Attack",
+        description: "Sophisticated attackers exploit smart contract vulnerabilities to drain decentralized finance protocol.",
+        url: "#",
+        publishedAt: "2025-01-27T18:00:00Z",
+        source: { name: "DeFi Security Alert" },
+        category: "blockchain cryptocurrency"
+    },
+    {
+        title: "Central Bank Digital Currency Pilot Program Launches",
+        description: "Federal Reserve begins testing digital dollar with enhanced security and privacy features.",
+        url: "#",
+        publishedAt: "2025-01-27T17:15:00Z",
+        source: { name: "CBDC News" },
+        category: "blockchain cryptocurrency"
+    },
+    
+    // AI & Machine Learning Articles
+    {
+        title: "AI Model Poisoning Attacks Threaten Machine Learning Systems",
+        description: "Researchers demonstrate how malicious data can corrupt AI training processes and compromise model integrity.",
+        url: "#",
+        publishedAt: "2025-01-27T18:30:00Z",
+        source: { name: "AI Security Research" },
+        category: "artificial intelligence machine learning"
+    },
+    {
+        title: "Large Language Models Show Vulnerability to Prompt Injection",
+        description: "Security experts reveal how attackers can manipulate AI chatbots to bypass safety restrictions.",
+        url: "#",
+        publishedAt: "2025-01-27T17:45:00Z",
+        source: { name: "LLM Security Watch" },
+        category: "artificial intelligence machine learning"
+    }
 ];
 
 // Enhanced fetch function with GNews API
-async function fetchGNewsArticles(query, maxResults = 10) {
+async function fetchGNewsArticles(query, maxResults = 15) {
+    try {
+        // Filter articles by category or search term
+        let filteredArticles = mockArticles.filter(article => {
+            const matchesCategory = article.category && article.category.toLowerCase().includes(query.toLowerCase());
+            const matchesTitle = article.title.toLowerCase().includes(query.toLowerCase());
+            const matchesDescription = article.description.toLowerCase().includes(query.toLowerCase());
+            
+            return matchesCategory || matchesTitle || matchesDescription;
+        });
+        
+        // Sort by publication date (most recent first)
+        filteredArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        
+        // Limit results
+        filteredArticles = filteredArticles.slice(0, maxResults);
+        
+        // If no filtered results, return recent articles from all categories
+        if (filteredArticles.length === 0) {
+            const allArticles = [...mockArticles].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+            filteredArticles = allArticles.slice(0, maxResults);
+        }
+        
+        return filteredArticles;
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+        // Return recent articles as fallback
+        const fallbackArticles = [...mockArticles]
+            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+            .slice(0, maxResults);
+        return fallbackArticles;
+    }
+}
+
+// Function to get articles for main page sections
+async function getMainPageArticles(category, maxResults = 8) {
+    try {
+        let categoryArticles = mockArticles.filter(article => {
+            if (!article.category) {
+                // For articles without explicit category, match by title/description
+                return article.title.toLowerCase().includes(category.toLowerCase()) ||
+                       article.description.toLowerCase().includes(category.toLowerCase());
+            }
+            return article.category.toLowerCase().includes(category.toLowerCase());
+        });
+        
+        // Sort by publication date (most recent first)
+        categoryArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        
+        // If we don't have enough articles for this category, add some general recent articles
+        if (categoryArticles.length < maxResults) {
+            const generalArticles = mockArticles
+                .filter(article => !categoryArticles.includes(article))
+                .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+                .slice(0, maxResults - categoryArticles.length);
+            
+            categoryArticles = [...categoryArticles, ...generalArticles];
+        }
+        
+        return categoryArticles.slice(0, maxResults);
+    } catch (error) {
+        console.error('Error getting main page articles:', error);
+        return mockArticles.slice(0, maxResults);
+    }
+}
+
+// Update the original function to use better filtering
+async function fetchGNewsArticlesOriginal(query, maxResults = 10) {
     try {
         // Always use mock data for demo since API key is not configured
         const filteredArticles = mockArticles.filter(article => 
+            (article.category && article.category.toLowerCase().includes(query.toLowerCase())) ||
             article.title.toLowerCase().includes(query.toLowerCase()) ||
             article.description.toLowerCase().includes(query.toLowerCase())
         );
         
+        // Sort by date and limit results
+        const sortedArticles = filteredArticles
+            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+            .slice(0, maxResults);
+        
         // If no filtered results, return all mock articles
-        return filteredArticles.length > 0 ? filteredArticles : mockArticles;
+        return sortedArticles.length > 0 ? sortedArticles : mockArticles.slice(0, maxResults);
     } catch (error) {
         console.error('Error fetching articles:', error);
-        return mockArticles; // Fallback to mock data
+        return mockArticles.slice(0, maxResults); // Fallback to mock data
     }
 }
 
@@ -522,20 +800,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentCyberSection = document.getElementById('content-cyber');
     
     if (contentSection) {
-        fetchGNewsArticles('hacking', 4).then(articles => {
+        getMainPageArticles('hacking', 8).then(articles => {
             displayArticles(articles, contentSection);
         }).catch(error => {
             console.error('Error loading hacking news:', error);
-            displayArticles(mockArticles, contentSection);
+            displayArticles(mockArticles.slice(0, 8), contentSection);
         });
     }
     
     if (contentCyberSection) {
-        fetchGNewsArticles('cybersecurity', 4).then(articles => {
+        getMainPageArticles('cybersecurity', 8).then(articles => {
             displayArticles(articles, contentCyberSection);
         }).catch(error => {
             console.error('Error loading cybersecurity news:', error);
-            displayArticles(mockArticles, contentCyberSection);
+            displayArticles(mockArticles.slice(0, 8), contentCyberSection);
         });
     }
     
