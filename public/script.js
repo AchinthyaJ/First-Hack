@@ -414,7 +414,8 @@ function displayArticles(articles, container) {
 }
 
 // Hacker typer functionality
-const codeSnippet = `
+const codeSnippets = [
+    `
 // Advanced Cybersecurity Analysis System
 class SecurityAnalyzer {
     constructor() {
@@ -614,7 +615,286 @@ setInterval(() => {
     const timestamp = new Date().toISOString();
     console.log(\`[\${timestamp}] System status: OPERATIONAL\`);
 }, 10000);
-`;
+`,
+    `
+// Network Penetration Testing Framework
+import { NetworkScanner } from './modules/scanner.js';
+import { VulnerabilityAssessment } from './modules/vuln-assessment.js';
+import { ExploitFramework } from './modules/exploits.js';
+
+class PenetrationTester {
+    constructor(target) {
+        this.target = target;
+        this.results = {
+            reconnaissance: {},
+            scanning: {},
+            enumeration: {},
+            vulnerabilities: [],
+            exploits: [],
+            postExploitation: {}
+        };
+    }
+
+    async performReconnaissance() {
+        console.log('🔍 Starting reconnaissance phase...');
+        
+        // DNS enumeration
+        const dnsResults = await this.enumerateDNS(this.target);
+        console.log('📋 DNS enumeration completed');
+        
+        // WHOIS lookup
+        const whoisData = await this.performWhoisLookup(this.target);
+        console.log('📊 WHOIS data retrieved');
+        
+        // Social media intelligence
+        const osintResults = await this.gatherOSINT(this.target);
+        console.log('🕵️ OSINT gathering completed');
+        
+        this.results.reconnaissance = {
+            dns: dnsResults,
+            whois: whoisData,
+            osint: osintResults
+        };
+    }
+
+    async performNetworkScanning() {
+        console.log('🌐 Initiating network scanning...');
+        
+        const scanner = new NetworkScanner(this.target);
+        
+        // Port scanning
+        const openPorts = await scanner.scanPorts();
+        console.log(\`🔓 Found \${openPorts.length} open ports\`);
+        
+        // Service detection
+        const services = await scanner.detectServices(openPorts);
+        console.log('🔧 Service detection completed');
+        
+        // OS fingerprinting
+        const osFingerprint = await scanner.detectOS();
+        console.log('💻 OS fingerprinting completed');
+        
+        this.results.scanning = {
+            ports: openPorts,
+            services: services,
+            os: osFingerprint
+        };
+    }
+
+    async performVulnerabilityAssessment() {
+        console.log('🛡️ Starting vulnerability assessment...');
+        
+        const vulnScanner = new VulnerabilityAssessment();
+        
+        // CVE database lookup
+        const cveResults = await vulnScanner.scanForCVEs(this.results.scanning.services);
+        console.log(\`⚠️ Found \${cveResults.length} potential vulnerabilities\`);
+        
+        // Custom vulnerability checks
+        const customVulns = await vulnScanner.performCustomChecks(this.target);
+        console.log('🔍 Custom vulnerability checks completed');
+        
+        this.results.vulnerabilities = [...cveResults, ...customVulns];
+    }
+
+    async attemptExploitation() {
+        console.log('💥 Beginning exploitation phase...');
+        
+        const exploitFramework = new ExploitFramework();
+        
+        for (const vuln of this.results.vulnerabilities) {
+            if (vuln.severity === 'CRITICAL' || vuln.severity === 'HIGH') {
+                console.log(\`🎯 Attempting to exploit: \${vuln.name}\`);
+                
+                const exploitResult = await exploitFramework.executeExploit(vuln, this.target);
+                
+                if (exploitResult.success) {
+                    console.log('✅ Exploitation successful!');
+                    this.results.exploits.push(exploitResult);
+                    
+                    // Attempt privilege escalation
+                    const privEsc = await this.attemptPrivilegeEscalation(exploitResult);
+                    if (privEsc.success) {
+                        console.log('👑 Privilege escalation successful!');
+                    }
+                } else {
+                    console.log('❌ Exploitation failed');
+                }
+            }
+        }
+    }
+
+    async performPostExploitation() {
+        console.log('🔓 Post-exploitation activities...');
+        
+        // Data exfiltration simulation
+        const sensitiveData = await this.locateSensitiveData();
+        console.log(\`📁 Located \${sensitiveData.length} sensitive files\`);
+        
+        // Persistence mechanisms
+        const persistence = await this.establishPersistence();
+        console.log('🔒 Persistence mechanisms established');
+        
+        // Lateral movement
+        const lateralTargets = await this.identifyLateralTargets();
+        console.log(\`🎯 Identified \${lateralTargets.length} lateral movement targets\`);
+        
+        this.results.postExploitation = {
+            data: sensitiveData,
+            persistence: persistence,
+            lateralMovement: lateralTargets
+        };
+    }
+
+    generateReport() {
+        const report = {
+            target: this.target,
+            timestamp: new Date().toISOString(),
+            summary: {
+                vulnerabilitiesFound: this.results.vulnerabilities.length,
+                successfulExploits: this.results.exploits.length,
+                riskLevel: this.calculateRiskLevel()
+            },
+            findings: this.results,
+            recommendations: this.generateRecommendations()
+        };
+        
+        console.log('📋 Penetration test report generated');
+        return report;
+    }
+}
+
+// Initialize penetration testing
+const penTest = new PenetrationTester('target-system.local');
+console.log('🚀 Penetration testing framework initialized');
+`,
+    `
+// Advanced Malware Analysis Laboratory
+class MalwareAnalyzer {
+    constructor() {
+        this.sandbox = new VirtualSandbox();
+        this.staticAnalysis = new StaticAnalyzer();
+        this.dynamicAnalysis = new DynamicAnalyzer();
+        this.behaviorAnalysis = new BehaviorAnalyzer();
+    }
+
+    async analyzeSample(malwareSample) {
+        console.log('🦠 Starting malware analysis...');
+        
+        // Static analysis phase
+        console.log('📊 Performing static analysis...');
+        const staticResults = await this.staticAnalysis.analyze(malwareSample);
+        
+        // File entropy analysis
+        const entropy = this.calculateEntropy(malwareSample);
+        console.log(\`📈 File entropy: \${entropy.toFixed(2)}\`);
+        
+        // String extraction
+        const strings = this.extractStrings(malwareSample);
+        console.log(\`🔤 Extracted \${strings.length} strings\`);
+        
+        // PE header analysis
+        const peAnalysis = this.analyzePEHeader(malwareSample);
+        console.log('🏗️ PE structure analyzed');
+        
+        // Dynamic analysis in sandbox
+        console.log('🔬 Deploying to sandbox environment...');
+        const sandboxResults = await this.sandbox.execute(malwareSample);
+        
+        // Network behavior monitoring
+        const networkActivity = await this.monitorNetworkActivity();
+        console.log(\`🌐 Network connections: \${networkActivity.connections.length}\`);
+        
+        // File system monitoring
+        const fileSystemChanges = await this.monitorFileSystem();
+        console.log(\`📁 File system changes: \${fileSystemChanges.length}\`);
+        
+        // Registry monitoring (Windows)
+        const registryChanges = await this.monitorRegistry();
+        console.log(\`🗃️ Registry modifications: \${registryChanges.length}\`);
+        
+        // Process behavior analysis
+        const processTree = await this.analyzeProcessTree();
+        console.log('🌳 Process tree analyzed');
+        
+        return this.generateAnalysisReport({
+            static: staticResults,
+            dynamic: sandboxResults,
+            network: networkActivity,
+            filesystem: fileSystemChanges,
+            registry: registryChanges,
+            processes: processTree
+        });
+    }
+
+    generateThreatIntelligence(analysisResults) {
+        console.log('🧠 Generating threat intelligence...');
+        
+        const indicators = this.extractIOCs(analysisResults);
+        const yara_rules = this.generateYaraRules(analysisResults);
+        const mitre_tactics = this.mapToMitreTactics(analysisResults);
+        
+        return {
+            indicators_of_compromise: indicators,
+            yara_signatures: yara_rules,
+            mitre_attack_mapping: mitre_tactics,
+            threat_classification: this.classifyThreat(analysisResults)
+        };
+    }
+}
+
+// Threat hunting operations
+class ThreatHunter {
+    constructor() {
+        this.queries = new ThreatHuntingQueries();
+        this.analytics = new BehaviorAnalytics();
+    }
+
+    async huntForThreats(environment) {
+        console.log('🎯 Initiating threat hunting operation...');
+        
+        // Anomaly detection
+        const anomalies = await this.detectAnomalies(environment);
+        console.log(\`⚠️ Detected \${anomalies.length} anomalies\`);
+        
+        // IOC hunting
+        const iocMatches = await this.huntForIOCs(environment);
+        console.log(\`🔍 IOC matches found: \${iocMatches.length}\`);
+        
+        // Behavioral analysis
+        const suspiciousBehavior = await this.analyzeBehavior(environment);
+        console.log('🕵️ Behavioral analysis completed');
+        
+        return {
+            anomalies: anomalies,
+            ioc_matches: iocMatches,
+            behavioral_indicators: suspiciousBehavior
+        };
+    }
+}
+
+console.log('🔬 Malware analysis laboratory online');
+console.log('🎯 Threat hunting systems active');
+`
+];
+
+let currentSnippetIndex = 0;
+let enterCount = 0;
+let backspaceCount = 0;
+let codeIndex = 0;
+
+function getRandomSnippet() {
+    return codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+}
+
+function switchToNextSnippet() {
+    currentSnippetIndex = (currentSnippetIndex + 1) % codeSnippets.length;
+    codeIndex = 0;
+    const codeDisplay = document.getElementById('codeDisplay');
+    if (codeDisplay) {
+        codeDisplay.textContent = '';
+    }
+}
 
 let enterCount = 0;
 let backspaceCount = 0;
@@ -633,12 +913,14 @@ document.addEventListener('keydown', function(event) {
     let codeDisplay = document.getElementById('codeDisplay');
     if (!codeDisplay) return;
     
-    let charsToAdd = 3;
+    let charsToAdd = Math.floor(Math.random() * 4) + 2; // Random between 2-5 characters
+    const currentSnippet = codeSnippets[currentSnippetIndex];
 
     if (event.key === 'Enter') {
         enterCount++;
         if (enterCount === 3) {
             enterCount = 0;
+            switchToNextSnippet();
             document.getElementById('overlay').style.display = 'flex';
             document.getElementById('container').style.display = 'none';
             document.getElementById('entryBox').value = 'Access Granted';
@@ -651,6 +933,7 @@ document.addEventListener('keydown', function(event) {
         backspaceCount++;
         if (backspaceCount === 3) {
             backspaceCount = 0;
+            switchToNextSnippet();
             document.getElementById('overlay').style.display = 'flex';
             document.getElementById('container').style.display = 'none';
             document.getElementById('entryBox').value = 'Access Denied';
@@ -659,11 +942,51 @@ document.addEventListener('keydown', function(event) {
         return;
     }
 
-    if (codeIndex < codeSnippet.length) {
-        let nextPart = codeSnippet.substring(codeIndex, codeIndex + charsToAdd);
+    // Special key combinations for advanced effects
+    if (event.ctrlKey && event.key === 'c') {
+        // Simulate system breach
+        codeDisplay.textContent += '\n\n🚨 SYSTEM BREACH DETECTED 🚨\n';
+        codeDisplay.textContent += 'Initiating countermeasures...\n';
+        codeDisplay.textContent += 'Firewall status: COMPROMISED\n';
+        codeDisplay.textContent += 'Deploying honeypot...\n\n';
+        return;
+    }
+    
+    if (event.ctrlKey && event.key === 'x') {
+        // Switch to next code snippet
+        switchToNextSnippet();
+        return;
+    }
+
+    if (codeIndex < currentSnippet.length) {
+        let nextPart = currentSnippet.substring(codeIndex, codeIndex + charsToAdd);
         codeDisplay.textContent += nextPart;
         codeIndex += charsToAdd;
     } else {
+        // Auto-switch to next snippet when current one is complete
+        switchToNextSnippet();
+    }
+    
+    // Add some random "glitch" effects
+    if (Math.random() < 0.02) { // 2% chance
+        const glitchChars = ['█', '▓', '▒', '░', '▄', '▀'];
+        const glitch = glitchChars[Math.floor(Math.random() * glitchChars.length)];
+        codeDisplay.textContent += glitch;
+        setTimeout(() => {
+            codeDisplay.textContent = codeDisplay.textContent.slice(0, -1);
+        }, 100);
+    }
+    
+    // Occasionally add system messages
+    if (Math.random() < 0.005) { // 0.5% chance
+        const messages = [
+            '\n[SYSTEM] Intrusion detected...\n',
+            '\n[ALERT] Unauthorized access attempt\n',
+            '\n[WARNING] Security protocol activated\n',
+            '\n[INFO] Encrypting data streams...\n'
+        ];
+        const message = messages[Math.floor(Math.random() * messages.length)];
+        codeDisplay.textContent += message;
         codeIndex = 0;
     }
     
@@ -738,7 +1061,7 @@ document.getElementById('opinionForm')?.addEventListener('submit', function(even
     document.getElementById('opinionForm').reset();
     
     // Show success message
-    showNotification('Solution submitted successfully!', 'success');
+    showNotification('Help request submitted successfully! The community will help you soon.', 'success');
     
     loadOpinions();
 });
@@ -751,7 +1074,7 @@ function loadOpinions() {
     const opinions = JSON.parse(localStorage.getItem('opinions')) || [];
     
     if (opinions.length === 0) {
-        opinionsList.innerHTML = '<p class="no-opinions">No solutions shared yet. Be the first to contribute!</p>';
+        opinionsList.innerHTML = '<p class="no-opinions">No help requests yet. Be the first to ask for help!</p>';
         return;
     }
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share Your Opinion</title>
-    <link rel="icon" href="./Images/icon.png">
+    <link rel="icon" href="./Icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -292,22 +292,26 @@
     <a href="./index.html" class="nav-back">← Back to Home</a>
     
     <div class="container">
-        <h1>💡 Share Your Solution</h1>
+        <h1>🔧 Get Solutions</h1>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+            Having tech problems? Need help with cybersecurity, programming, or any technology issue? 
+            Share your problem here and get solutions from our community of experts!
+        </p>
         <form id="opinionForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
             
-            <label for="person">Solution Title:</label>
-            <input type="text" id="person" name="person" required>
+            <label for="person">Problem Title:</label>
+            <input type="text" id="person" name="person" required placeholder="Brief description of your problem">
             
-            <label for="opinion">Your Solution Description:</label>
-            <textarea id="opinion" name="opinion" rows="6" required placeholder="Describe your solution, tutorial, or helpful tip..."></textarea>
+            <label for="opinion">Problem Description:</label>
+            <textarea id="opinion" name="opinion" rows="6" required placeholder="Describe your problem in detail. Include error messages, what you were trying to do, and what happened..."></textarea>
             
-            <button type="submit">🚀 Share Solution</button>
+            <button type="submit">🆘 Request Help</button>
         </form>
         
         <div id="opinions">
-            <h2>🔧 Community Solutions</h2>
+            <h2>💡 Community Solutions & Help</h2>
             <div id="opinionsList"></div>
         </div>
     </div>
