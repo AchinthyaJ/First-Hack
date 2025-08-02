@@ -7,28 +7,28 @@ const mockArticles = [
     {
         title: "Latest Cybersecurity Threats in 2025",
         description: "Explore the emerging cybersecurity threats that organizations need to be aware of in 2025.",
-        url: "#",
+        url: "https://www.cisa.gov/news-events/cybersecurity-advisories",
         publishedAt: "2025-01-27T10:00:00Z",
         source: { name: "Tech Security Today" }
     },
     {
         title: "AI-Powered Hacking Tools on the Rise",
         description: "How artificial intelligence is being used to create more sophisticated hacking tools.",
-        url: "#",
+        url: "https://www.darkreading.com/threat-intelligence/ai-powered-attacks",
         publishedAt: "2025-01-27T09:30:00Z",
         source: { name: "Cyber Defense Weekly" }
     },
     {
         title: "Blockchain Security: Best Practices",
         description: "Essential security measures for protecting blockchain applications and smart contracts.",
-        url: "#",
+        url: "https://blog.coinbase.com/blockchain-security-best-practices",
         publishedAt: "2025-01-27T08:45:00Z",
         source: { name: "Blockchain Security Journal" }
     },
     {
         title: "Zero-Day Vulnerabilities Discovered",
         description: "Security researchers have identified critical zero-day vulnerabilities in popular software.",
-        url: "#",
+        url: "https://nvd.nist.gov/vuln/search",
         publishedAt: "2025-01-27T08:00:00Z",
         source: { name: "Vulnerability Research Lab" }
     },
@@ -36,7 +36,7 @@ const mockArticles = [
     {
         title: "New Ransomware Campaign Targets Healthcare Systems",
         description: "A sophisticated ransomware group has launched targeted attacks against major healthcare providers worldwide.",
-        url: "#",
+        url: "https://www.bleepingcomputer.com/news/security/ransomware/",
         publishedAt: "2025-01-27T15:30:00Z",
         source: { name: "Healthcare Security Alert" },
         category: "hacking"
@@ -44,7 +44,7 @@ const mockArticles = [
     {
         title: "Critical SSH Vulnerability Allows Remote Code Execution",
         description: "Security researchers discover a critical flaw in OpenSSH that could allow attackers to execute arbitrary code.",
-        url: "#",
+        url: "https://www.openssh.com/security.html",
         publishedAt: "2025-01-27T14:45:00Z",
         source: { name: "Security Research Today" },
         category: "hacking"
@@ -52,7 +52,7 @@ const mockArticles = [
     {
         title: "APT Group Exploits Microsoft Exchange Servers",
         description: "Advanced persistent threat actors are actively exploiting newly discovered vulnerabilities in Exchange servers.",
-        url: "#",
+        url: "https://msrc.microsoft.com/update-guide/vulnerability",
         publishedAt: "2025-01-27T13:20:00Z",
         source: { name: "Threat Intelligence Weekly" },
         category: "hacking"
@@ -60,7 +60,7 @@ const mockArticles = [
     {
         title: "Social Engineering Attacks Increase by 300% in 2025",
         description: "Cybercriminals are increasingly using sophisticated social engineering techniques to bypass security measures.",
-        url: "#",
+        url: "https://www.sans.org/white-papers/social-engineering/",
         publishedAt: "2025-01-27T12:15:00Z",
         source: { name: "Social Engineering Watch" },
         category: "hacking"
@@ -68,7 +68,7 @@ const mockArticles = [
     {
         title: "New Phishing Campaign Mimics Popular Banking Apps",
         description: "Hackers create convincing replicas of banking applications to steal user credentials and financial data.",
-        url: "#",
+        url: "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/internet-fraud",
         publishedAt: "2025-01-27T11:30:00Z",
         source: { name: "Financial Security News" },
         category: "hacking"
@@ -76,7 +76,7 @@ const mockArticles = [
     {
         title: "Supply Chain Attack Compromises Software Development Tools",
         description: "Malicious actors infiltrate popular development tools, potentially affecting thousands of applications.",
-        url: "#",
+        url: "https://www.crowdstrike.com/cybersecurity-101/cyberattacks/supply-chain-attacks/",
         publishedAt: "2025-01-27T10:45:00Z",
         source: { name: "DevSec Alert" },
         category: "hacking"
@@ -86,7 +86,7 @@ const mockArticles = [
     {
         title: "New AI-Powered Threat Detection System Launched",
         description: "Leading cybersecurity firm releases advanced AI system capable of detecting previously unknown threats.",
-        url: "#",
+        url: "https://www.crowdstrike.com/products/threat-intelligence/",
         publishedAt: "2025-01-27T16:00:00Z",
         source: { name: "AI Security Today" },
         category: "cybersecurity"
@@ -94,7 +94,7 @@ const mockArticles = [
     {
         title: "Government Announces New Cybersecurity Framework",
         description: "Federal agencies release comprehensive guidelines for protecting critical infrastructure from cyber threats.",
-        url: "#",
+        url: "https://www.nist.gov/cyberframework",
         publishedAt: "2025-01-27T15:15:00Z",
         source: { name: "Government Security Bulletin" },
         category: "cybersecurity"
@@ -102,7 +102,7 @@ const mockArticles = [
     {
         title: "Multi-Factor Authentication Becomes Mandatory for Federal Contractors",
         description: "New regulations require all government contractors to implement advanced authentication measures.",
-        url: "#",
+        url: "https://www.cisa.gov/mfa",
         publishedAt: "2025-01-27T14:30:00Z",
         source: { name: "Federal Compliance News" },
         category: "cybersecurity"
@@ -110,7 +110,7 @@ const mockArticles = [
     {
         title: "Quantum-Resistant Encryption Standards Finalized",
         description: "NIST releases final standards for cryptographic algorithms designed to withstand quantum computer attacks.",
-        url: "#",
+        url: "https://csrc.nist.gov/projects/post-quantum-cryptography",
         publishedAt: "2025-01-27T13:45:00Z",
         source: { name: "Quantum Security Journal" },
         category: "cybersecurity"
@@ -118,7 +118,7 @@ const mockArticles = [
     {
         title: "Cloud Security Spending Reaches Record High",
         description: "Organizations worldwide increase cloud security investments as remote work continues to grow.",
-        url: "#",
+        url: "https://aws.amazon.com/security/",
         publishedAt: "2025-01-27T12:30:00Z",
         source: { name: "Cloud Security Report" },
         category: "cybersecurity"
@@ -126,7 +126,7 @@ const mockArticles = [
     {
         title: "Cybersecurity Skills Gap Widens Despite Training Programs",
         description: "Industry report shows growing demand for cybersecurity professionals outpaces available talent.",
-        url: "#",
+        url: "https://www.isc2.org/Research/Workforce-Study",
         publishedAt: "2025-01-27T11:45:00Z",
         source: { name: "Cybersecurity Workforce Study" },
         category: "cybersecurity"
@@ -136,7 +136,7 @@ const mockArticles = [
     {
         title: "New iPhone Security Feature Blocks Advanced Spyware",
         description: "Apple introduces revolutionary security technology that prevents state-sponsored surveillance tools.",
-        url: "#",
+        url: "https://support.apple.com/guide/security/",
         publishedAt: "2025-01-27T16:30:00Z",
         source: { name: "Mobile Security News" },
         category: "smartphone technology"
@@ -144,7 +144,7 @@ const mockArticles = [
     {
         title: "Android 15 Introduces Enhanced Privacy Controls",
         description: "Google's latest Android version includes advanced privacy features and improved app permissions.",
-        url: "#",
+        url: "https://developer.android.com/about/versions/15/privacy",
         publishedAt: "2025-01-27T15:45:00Z",
         source: { name: "Android Security Update" },
         category: "smartphone technology"
@@ -152,7 +152,7 @@ const mockArticles = [
     {
         title: "5G Network Vulnerabilities Expose User Data",
         description: "Security researchers identify critical flaws in 5G infrastructure that could compromise user privacy.",
-        url: "#",
+        url: "https://www.nist.gov/news-events/news/2023/01/nist-releases-cybersecurity-guidance-5g-cloud-infrastructures",
         publishedAt: "2025-01-27T14:15:00Z",
         source: { name: "5G Security Watch" },
         category: "smartphone technology"
@@ -162,7 +162,7 @@ const mockArticles = [
     {
         title: "Cryptocurrency Investment Scams Surge 400% in 2025",
         description: "Fraudsters exploit crypto market volatility to deceive investors with fake investment opportunities.",
-        url: "#",
+        url: "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/06/reports-show-scammers-cashing-crypto-craze",
         publishedAt: "2025-01-27T17:00:00Z",
         source: { name: "Fraud Prevention Alert" },
         category: "tech scams"
@@ -170,7 +170,7 @@ const mockArticles = [
     {
         title: "AI-Generated Deepfake Scams Target Elderly Population",
         description: "Scammers use advanced AI to create convincing video calls impersonating family members.",
-        url: "#",
+        url: "https://www.aarp.org/money/scams-fraud/info-2023/deepfake-scams.html",
         publishedAt: "2025-01-27T16:15:00Z",
         source: { name: "Elder Fraud Protection" },
         category: "tech scams"
@@ -178,7 +178,7 @@ const mockArticles = [
     {
         title: "Fake Tech Support Calls Increase During Holiday Season",
         description: "Cybercriminals ramp up fake technical support scams targeting unsuspecting computer users.",
-        url: "#",
+        url: "https://www.microsoft.com/en-us/security/blog/tech-support-scams/",
         publishedAt: "2025-01-27T15:30:00Z",
         source: { name: "Scam Alert Network" },
         category: "tech scams"
@@ -188,7 +188,7 @@ const mockArticles = [
     {
         title: "Gaming Platforms Implement Advanced Anti-Cheat Systems",
         description: "Major gaming companies deploy AI-powered systems to detect and prevent cheating in online games.",
-        url: "#",
+        url: "https://blog.counter-strike.net/index.php/category/updates/",
         publishedAt: "2025-01-27T17:30:00Z",
         source: { name: "Gaming Security Today" },
         category: "gaming technology"
@@ -196,7 +196,7 @@ const mockArticles = [
     {
         title: "NFT Gaming Marketplace Suffers Major Security Breach",
         description: "Popular blockchain gaming platform loses millions in digital assets due to smart contract vulnerability.",
-        url: "#",
+        url: "https://blog.opensea.io/security/",
         publishedAt: "2025-01-27T16:45:00Z",
         source: { name: "Blockchain Gaming News" },
         category: "gaming technology"
@@ -206,7 +206,7 @@ const mockArticles = [
     {
         title: "DeFi Protocol Loses $50M in Flash Loan Attack",
         description: "Sophisticated attackers exploit smart contract vulnerabilities to drain decentralized finance protocol.",
-        url: "#",
+        url: "https://blog.chainalysis.com/reports/defi-hacks-2023/",
         publishedAt: "2025-01-27T18:00:00Z",
         source: { name: "DeFi Security Alert" },
         category: "blockchain cryptocurrency"
@@ -214,7 +214,7 @@ const mockArticles = [
     {
         title: "Central Bank Digital Currency Pilot Program Launches",
         description: "Federal Reserve begins testing digital dollar with enhanced security and privacy features.",
-        url: "#",
+        url: "https://www.federalreserve.gov/central-bank-digital-currency.htm",
         publishedAt: "2025-01-27T17:15:00Z",
         source: { name: "CBDC News" },
         category: "blockchain cryptocurrency"
@@ -224,7 +224,7 @@ const mockArticles = [
     {
         title: "AI Model Poisoning Attacks Threaten Machine Learning Systems",
         description: "Researchers demonstrate how malicious data can corrupt AI training processes and compromise model integrity.",
-        url: "#",
+        url: "https://blog.openai.com/safety/",
         publishedAt: "2025-01-27T18:30:00Z",
         source: { name: "AI Security Research" },
         category: "artificial intelligence machine learning"
@@ -232,7 +232,7 @@ const mockArticles = [
     {
         title: "Large Language Models Show Vulnerability to Prompt Injection",
         description: "Security experts reveal how attackers can manipulate AI chatbots to bypass safety restrictions.",
-        url: "#",
+        url: "https://research.google/blog/",
         publishedAt: "2025-01-27T17:45:00Z",
         source: { name: "LLM Security Watch" },
         category: "artificial intelligence machine learning"
